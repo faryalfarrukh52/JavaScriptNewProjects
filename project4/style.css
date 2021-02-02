@@ -1,0 +1,159 @@
+/* for colour useability through out */
+
+:root {
+    --primary-color: rgb(226, 167, 4);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* flex makes page horizontal  */
+
+body {
+    background-color: rgb(41, 83, 13);
+    display: flex;
+    flex-direction: column;
+    height: 200vh;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 20px;
+}
+
+h1 {
+    /* to call primary color */
+    color: var(--primary-color);
+    text-align: center;
+}
+
+p {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 20px;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 20px;
+    /* padding :top/bottom left/right  */
+    border: 1px solid var(--primary-color);
+    font-weight: bold;
+}
+
+.money-img {
+    width: 150px;
+    transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 2px 10px var(--primary-color);
+    cursor: pointer;
+    /* transition-property: all; */
+    /* transition: width 3s; */
+    transition: transform 1s;
+}
+
+.bit-img {
+    width: 150px;
+    transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 2px 10px var(--primary-color);
+    cursor: pointer;
+    /* transition-property: all; */
+    /* transition: width 3s; */
+    transition: transform 9s;
+    /* margin: 0px 10px 10px 50px; */
+    margin-left: 35%;
+    margin-top: 15%;
+}
+
+.money-img:hover {
+    /* width: 100px; */
+    transform: scale(1.1);
+}
+
+.currency {
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.currency select {
+    padding: 10px 20px;
+    border: 1px solid lightgray;
+    font-size: 16px;
+    background-color: lightgray;
+    opacity: 2;
+    width: 50%;
+}
+
+.currency select:hover {
+    background-color: var(--primary-color);
+}
+
+.currency input {
+    border: 0;
+    background: transparent;
+    color: whitesmoke;
+    font-size: 20px;
+    text-align: right;
+    width: 50%;
+}
+
+.flip-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rate {
+    color: var(--primary-color);
+    font-size: 24px;
+    padding: 0 10px;
+}
+
+.bit-rate {
+    color: var(--primary-color);
+    font-size: 24px;
+    padding: 0 10px 10px;
+    display: flex;
+    align-content: center;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+select:focus,
+input:focus,
+button:focus {
+    outline: 0;
+}
+
+
+/* Bitcoin Exchange */
+
+
+/* 
+.bit-rate {
+    color: var(--primary-color);
+    font-size: 24px;
+    width: 50%;
+    padding: 0 10px;
+    border: 0;
+    background: transparent;
+    text-align: right;
+    width: 50%;
+} */
+
+.bit {
+    width: 70%;
+    height: 20%;
+    border: 0;
+    font-size: 24px;
+    text-align: center;
+    align-content: center;
+    margin-left: 15%;
+}
