@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(14, 13, 13);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'lato', sans-serif;
+    margin: 0;
+}
+
+.heading {
+    border: 0;
+    border-radius: 5px;
+    font-weight: bolder;
+    font-size: x-large;
+    font-family: fantasy;
+    /* transform: rotateX(-35deg); */
+    box-shadow: 0 20px 50px rgba(245, 1, 1, 0.9);
+    width: 60%;
+    /* display: flex; */
+    text-align: center;
+    color: rgb(218, 212, 212);
+}
+
+.pax {
+    color: rgb(236, 14, 14);
+}
+
+.x {
+    color: rgb(51, 187, 9);
+}
+
+.d {
+    color: rgb(236, 14, 14);
+}
+
+.movie-container {
+    margin: 20px 0;
+}
+
+.movie-container select {
+    background-color: rgb(236, 14, 14);
+    border: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 10px;
+    padding: 5px 15px 5px 15px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    color: whitesmoke;
+    border-color: whitesmoke;
+}
+
+.movie-container select:hover {
+    background-color: rgb(212, 59, 3);
+}
+
+
+/* conatainer for 3d look on screen */
+
+.container {
+    perspective: 900px;
+}
+
+.seat {
+    background-color: rgb(141, 137, 137);
+    height: 12px;
+    width: 15px;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.row {
+    display: flex;
+}
+
+.seat.selected {
+    background-color: rgb(51, 187, 9);
+}
+
+.seat.occupied {
+    background-color: rgb(42, 71, 134);
+}
+
+
+/* select seat */
+
+.seat:nth-of-type(2) {
+    margin-right: 20px;
+}
+
+
+/* count seats from last reverse */
+
+.seat:nth-last-of-type(2) {
+    margin-left: 20px;
+}
+
+.seat:not(.occupied):hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.legend .seat:not(.occupied):hover {
+    cursor: default;
+    transform: scale(1);
+}
+
+.legend {
+    margin: 0 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    display: flex;
+    list-style-type: none;
+    border-radius: 5px;
+    justify-content: space-between;
+    color: seashell;
+}
+
+.legend li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.legend li small {
+    margin-left: 2px;
+}
+
+.screen {
+    background-color: white;
+    width: 100%;
+    height: 100px;
+    margin: 15px 0;
+    transform: rotateX(-45deg);
+    box-shadow: 0 2px 20px rgba(255, 255, 255, 0.7);
+}
+
+p.text {
+    /* top and bottom 5px and left right is 0 */
+    margin: 5px 0;
+}
+
+p.text span {
+    color: rgb(236, 14, 14);
+}
+
+.home {
+    width: 80px;
+    height: 20px;
+    cursor: pointer;
+    text-align: center;
+    border: 0;
+    border-radius: 3px;
+}
+
+.home:hover {
+    color: rgb(236, 14, 14);
+}
