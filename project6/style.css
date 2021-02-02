@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+:root {
+    --primary-color: rgb(24, 24, 24);
+    --secondary-color: rgb(255, 198, 9);
+    --modal-duration: 2s;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* height: 20vh; */
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    /* nav sliding time */
+    transition: transform 0.8s ease;
+    background-color: lightgray;
+}
+
+
+/* to output navbar */
+
+body.show-nav {
+    transform: translateX(200px);
+}
+
+nav {
+    background-color: var(--primary-color);
+    color: whitesmoke;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 100;
+    width: 200px;
+    transform: translateX(-100%);
+}
+
+nav .logo {
+    padding: 30px 0;
+    text-align: center;
+}
+
+nav .logo img {
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+}
+
+nav ul {
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 20px;
+    border-bottom: 2px solid rgba(200, 200, 200, 0.2);
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    background-color: rgb(185, 95, 137);
+}
+
+nav ul li:first-of-type {
+    border-top: 2px solid rgb(177, 197, 202);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    /* color: rgb(177, 197, 202); */
+    /* color: rgb(185, 95, 137); */
+}
+
+header {
+    background-color: rgb(10, 20, 29);
+    color: whitesmoke;
+    font-size: 125%;
+    text-align: center;
+    position: relative;
+    padding: 40px 15px;
+    height: 230px;
+    border-bottom: 5px solid rgb(185, 95, 137);
+}
+
+header h1 {
+    margin: 0;
+    color: rgb(185, 95, 137);
+}
+
+header p {
+    margin: 30px 0;
+}
+
+button,
+input[type='submit'] {
+    /* background-color: hsl(46, 100%, 50%); */
+    background-color: lightgray;
+    border-radius: 5px;
+    border: 0;
+    color: rgb(37, 36, 36);
+    cursor: pointer;
+    padding: 10px 10px;
+    /* font-weight: bold; */
+}
+
+button,
+input[type='submit'] {
+    outline: none;
+}
+
+input[type='submit']:hover {
+    background-color: rgb(185, 95, 137);
+}
+
+.toggle {
+    background-color: lightgray;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.toggle:hover {
+    background-color: rgb(185, 95, 137);
+}
+
+.apply {
+    padding: 12px 30px;
+    font-size: 18px;
+    /* text-align: center; */
+}
+
+.apply:hover {
+    background-color: rgb(185, 95, 137);
+}
+
+.container {
+    background-color: rgb(177, 197, 202);
+    padding: 15px;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 800px;
+    color: rgb(20, 20, 20);
+}
+
+
+/* styling modal */
+
+.modal-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+
+/* modal open and close with js class */
+
+.modal-container.show-modal {
+    display: block;
+}
+
+.modal {
+    background-color: rgb(177, 197, 202);
+    /* background-color: lightgray; */
+    border-radius: 5px;
+    max-width: 100%;
+    width: 500px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(34, 33, 34);
+    /* modal animation  */
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
+}
+
+.modal-header {
+    background-color: rgb(185, 95, 137);
+    padding: 15px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.modal-header h3 {
+    margin: 0;
+}
+
+.modal-content {
+    padding: 20px;
+}
+
+.modal-content p {
+    text-align: center;
+}
+
+.modal-form div {
+    margin: 15px 0;
+}
+
+.modal-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.modal-form .form-input {
+    width: 100%;
+    padding: 10px;
+}
+
+.form-input:focus {
+    outline: none;
+}
+
+.form-input,
+input[type='submit'] {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    font-size: 14px;
+}
+
+.close-btn {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 24px;
+    color: rgb(133, 141, 143);
+}
+
+
+/*for modal animation opacity*/
+
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
