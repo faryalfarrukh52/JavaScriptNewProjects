@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=" stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css " integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous " />
+    <link rel="stylesheet" href="style.css">
+    <title>Book Store</title>
+</head>
+
+<body>
+
+    <div class="main-container" id="main-container">
+        <header class="header">
+            <!-- main heading -->
+            <h1 class="h1">Online Book Store</h1>
+            <!-- search form/box -->
+            <div class="search">
+                <form class="search" id="search-div">
+                    <input type="text" id="search" placeholder="Enter book to find">
+                    <button class="search-btn" id="search-btn">
+                    <i class="fas fa-search"></i>
+                    </button>
+                    <div id="total" class="total">
+                        <!-- <p id="total-books">Total Books : <span> 0</span></p> -->
+                        <!-- <p>Add To Cart: <span>0</span></p> -->
+                    </div>
+                </form>
+
+            </div>
+            <!-- search field ends. -->
+
+
+        </header>
+
+
+
+
+        <!-- Div to show all search books from API -->
+        <div class="show-books" id="book-container">
+            <table class="book-data" id="td">
+                <tr>
+                    <th>S.No</th>
+                    <th>Books Collection</th>
+                    <th>Display Book</th>
+                    <!-- <th>Remove</th> -->
+                </tr>
+                <tbody>
+                    <!-- <tr id="td"></tr> -->
+
+                </tbody>
+            </table>
+
+            <div id="buy"></div>
+        </div>
+
+
+
+        <!-- Add new book container by pressing modal button -->
+        <div class="add-new-book " id="button-div">
+            <button class="modal-btn" id="add-new-book"> Add New Book</button>
+            <button class="modal-btn" id="home-btn" onclick="homeFunc()"> Home Page</button>
+            <button class="modal-btn" id="clear-btn"> Clear Books</button>
+        </div>
+
+        <!--  -->
+
+        <!-- Add new book container by pressing modal button -->
+        <div class="add-new-book " id="back-button">
+            <button class="modal-btn" id="back-btn" onclick="homeFunc()"> Back</button>
+        </div>
+
+    </div>
+
+    <!-- Modal Container  -->
+    <div class="modal-container" id="modal-container">
+        <div class="modal">
+            <!-- button to close modal page -->
+            <button class="close-btn" id="close">
+    <i class="fas fa-times"></i>
+</button>
+            <!-- Modal header with heading -->
+            <div class="modal-header">
+                <h1>Add New Book</h1>
+            </div>
+
+            <!-- Modal form and content to add details of new book -->
+            <div class="modal-content">
+                <p>Add your book to store in the library.</p>
+                <form class="modal-form">
+                    <div>
+                        <label for="book-name">Book Name</label>
+                        <input type="text" class="form-input" id="book-name" placeholder="Enter book name">
+                    </div>
+
+                    <div>
+                        <label for="author-name">Author Name</label>
+                        <input type="text" class="form-input" id="author-name" placeholder="Enter book author name">
+                    </div>
+
+                    <!-- <div>
+                        <label for="book-image">Book Image</label>
+                        <input type="file" class="form-input " id="book-image" placeholder="Select image">
+                    </div> -->
+
+                    <div>
+                        <label for="book-price">Book Price</label>
+                        <select name="" class="form-input" id="book-price">
+                <option value="$100">$100</option>
+                <option value="$200">$200</option>
+                <option value="$300">$300</option>
+                <option value="$400">$400</option>
+            </select>
+                    </div>
+                    <input type="submit" value="submit" class="submit-btn" id="submit-btn">
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
