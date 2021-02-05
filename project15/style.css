@@ -61,3 +61,7 @@ form button {
     padding: 13px 30px;
     color: #f5f6fa;
 }
+
+form input:focus {
+    outline: 0;
+}
