@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(images/6cc6a7370f4f50870641389870f92379.jpg);
+    font-family: 'Roboto Slab', serif;
+    /* flat ui color */
+    /* background-color: #ecf0f1; */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1 {
+    position: relative;
+    color: rgb(13, 96, 228);
+    font-weight: bolder;
+}
+
+h1 button {
+    position: absolute;
+    right: 0;
+    transform: translate(120%, -50%);
+    z-index: 2;
+    /* top: 0; */
+}
+
+p {
+    color: #706e6e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25%;
+    font-size: 26px;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: #ecf0f1;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn-small {
+    font-size: 12px;
+    padding: 10px 10px;
+    color: red;
+}
+
+.btn-ghost {
+    background-color: transparent;
+    border: 0;
+}
+
+.btn-clear {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+}
+
+.btn-home {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+
+.card-container {
+    position: relative;
+    height: 300px;
+    width: 500px;
+    max-width: 100%;
+    perspective: 1000px;
+    border: 25px double #c7c2bd;
+    border-radius: 10px;
+}
+
+.card {
+    /* background-color: rgb(196, 116, 156); */
+    background-image: url(images/6cc6a7370f4f50870641389870f92379.jpg);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    font-size: 1.5em;
+    transform: translateX(50%) rotateY(-10deg);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.card img {
+    height: 100%;
+    width: 100%;
+}
+
+.card.active {
+    opacity: 1;
+    cursor: pointer;
+    z-index: 10;
+    transform: translateX(0) rotateY(0deg);
+}
+
+.card.left {
+    transform: translateX(-50%) rotateY(10deg);
+}
+
+.card.show-answer .inner-card {
+    transform: rotateX(180deg);
+}
+
+.inner-card {
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    backface-visibility: hidden;
+    text-align: center;
+}
+
+.card-front {
+    transform: rotateX(0deg);
+    z-index: 2;
+}
+
+.card-back {
+    transform: rotateX(180deg);
+}
+
+
+/* add content on HTML */
+
+.card-front::after,
+.card-back::after {
+    content: '\f021  Flip';
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+    color: red;
+    font-family: 'Font Awesome 5 Free', 'Roboto Slab', serif;
+    right: 10px;
+    top: 10px;
+}
+
+.navigation {
+    display: flex;
+    margin: 20px 0;
+}
+
+.navigation .nav-btn {
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+    font-size: 16px;
+    color: rgb(13, 96, 228);
+    font-weight: bolder;
+}
+
+.navigation .nav-btn:focus {
+    outline: none;
+}
+
+.navigation p {
+    margin: 0 25px;
+    color: rgb(13, 96, 228);
+    font-weight: bolder;
+}
+
+.add-card-container {
+    background-color: #051e35;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    transition: 0.5s ease;
+    opacity: 0;
+    z-index: -1;
+    color: white;
+}
+
+.add-card-container.show {
+    opacity: 1;
+    z-index: 2;
+}
+
+.add-card-container h1 {
+    margin: 10px 0;
+}
+
+.form-control label {
+    display: block;
+    margin: 20px 0 10px;
+}
+
+.form-control textarea {
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    min-width: 500px;
+    max-width: 100%;
+    min-height: 50%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-control textarea:focus {
+    outline: none;
+}
