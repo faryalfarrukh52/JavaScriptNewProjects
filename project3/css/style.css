@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Questrial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    max-height: 100vh;
+    background-color: rgb(224, 98, 26);
+}
+
+h1 {
+    color: whitesmoke;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    font-size: xxx-large;
+}
+
+.screen {
+    cursor: pointer;
+    width: 48%;
+    /* transform: rotateX(-45deg);
+    /* box-shadow: 0 2px 20px rgba(255, 255, 255, 0.7); */
+    background-color: rgb(223, 215, 215) !important;
+}
+
+.controls {
+    background-color: rgb(15, 15, 15);
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 48%;
+    justify-content: center;
+    padding: 15px;
+}
+
+.btn {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn:focus {
+    outline: 0;
+}
+
+.fa-play {
+    color: rgb(219, 97, 49);
+}
+
+.fa-stop-circle {
+    color: rgb(219, 97, 49);
+}
+
+.fa-pause {
+    color: white;
+}
+
+span.timestamp {
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+
+/* responsive width */
+
+@media(max-width: 800px) {
+    .screen,
+    .controls {
+        width: 90%;
+    }
+}
+
+
+/*  */
+
+.home {
+    width: 80px;
+    height: 20px;
+    cursor: pointer;
+    text-align: center;
+    border: 0;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+.home:hover {
+    color: rgb(236, 14, 14);
+}
