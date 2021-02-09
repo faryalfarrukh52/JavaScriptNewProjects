@@ -9,6 +9,11 @@ body {
     margin: 0;
 }
 
+p {
+    color: #dcdde1;
+    text-align: center;
+}
+
 button {
     cursor: pointer;
 }
@@ -29,11 +34,12 @@ header {
     align-items: center;
     justify-content: center;
     padding: 50px 0;
-    border: 25px solid #9c88ff;
+    border: 25px solid #a89aec;
 }
 
 header h1 {
     margin: 0 0 30px;
+    color: #786fa6;
 }
 
 form {
@@ -48,6 +54,7 @@ form input {
     width: 100%;
     font-size: 16px;
     padding: 15px 30px;
+    color: #9c88ff;
 }
 
 form button {
@@ -64,4 +71,74 @@ form button {
 
 form input:focus {
     outline: 0;
+}
+
+.container {
+    margin: 30px auto;
+    max-width: 100%;
+    width: 500px;
+}
+
+ul.songs {
+    list-style-type: none;
+    padding: 0;
+    color: #ecf0f1;
+    font-size: 18px;
+}
+
+ul.songs li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.btn {
+    background-color: #9c88ff;
+    border: 0;
+    border-radius: 20px;
+    color: #f5f6fa;
+    padding: 5px 10px;
+}
+
+.btn:hover {
+    background-color: #f5f6fa;
+    color: #9c88ff;
+}
+
+hr {
+    opacity: 0.5;
+    color: #dcdde1;
+    background-color: #dcdde1;
+    width: 100%;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+}
+
+.centered button {
+    margin: 15px;
+}
+
+.container h2 {
+    text-align: center;
+    color: #a89aec;
+    text-decoration: underline;
+}
+
+.container p {
+    text-align: center;
+}
+
+@media(max-width:500px) {
+    form {
+        max-width: 350px;
+    }
+    .container p {
+        text-align: left;
+        margin: auto auto;
+        padding: 30px;
+    }
 }
