@@ -138,6 +138,10 @@ nav {
     font-size: 32px;
 }
 
+#home-page h2:focus{
+    text-decoration: underline;
+}
+
 #home-page p {
     text-align: center;
     font-size: 1.4vmax;
